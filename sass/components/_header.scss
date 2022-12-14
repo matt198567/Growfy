@@ -1,4 +1,9 @@
 .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(13, 13, 17, 0.522);
 }
 
 .header__container {
@@ -11,23 +16,31 @@
 
   @media (max-width: 991.98px) {
     column-gap: 25px;
+    min-height: 90px;
+  }
+
+  @media (max-width: 767.98px) {
+    column-gap: 15px;
   }
 }
 
+.header__logo,
+.header__cart,
+.header__button {
+  position: relative;
+  z-index: 5;
+}
+
 .header__logo {
+  @media (max-width: 560px) {
+    flex: 0 0 32px;
+    width: 32px;
+    overflow: hidden;
+  }
 }
 
 .header__menu {
   flex: 1 1 auto;
-}
-
-.menu {
-}
-
-.menu__icon {
-}
-
-.menu__body {
 }
 
 .menu__list {
@@ -40,12 +53,14 @@
   @media (max-width: 991.98px) {
     column-gap: 25px;
   }
-}
 
-.menu__item {
+  @media (max-width: 767.98px) {
+    column-gap: 15px;
+  }
 }
 
 .menu__link {
+  display: block;
   font-size: 16px;
   line-height: 1.62;
   color: #ffffff;
@@ -56,6 +71,9 @@
 }
 
 .header__cart {
+  @media (max-width: 559.98px) {
+    position: relative;
+  }
 }
 
 .cart-header {
@@ -72,20 +90,43 @@
 .cart-header__text {
   font-size: 18px;
   line-height: 1.55;
+
+  @media (max-width: 560px) {
+    display: none;
+  }
 }
 
 .cart-header__quantity {
-  background: rgba(129, 129, 139, 0.3);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-
   font-size: 14px;
   font-weight: 500;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @media (max-width: 559.98px) {
+    position: absolute;
+    left: 47%;
+    top: 57%;
+    transform: translate(-50%, -43%);
+  }
+
+  @media (min-width: 560px) {
+    background: rgba(129, 129, 139, 0.3);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.basket__wrap {
+  @media (min-width: 560px) {
+    display: none;
+  }
+}
+
+.basket__svg {
+  fill: #607d8b;
 }
 
 .header__button {
@@ -127,27 +168,82 @@
     z-index: 5;
   }
 
-  & span,
-  &::before,
-  &::after {
+  .icon-menu span,
+  .icon-menu::before,
+  .icon-menu::after {
     content: "";
     right: 0;
     position: absolute;
     width: 100%;
     height: 2px;
     background-color: #ffffff;
+    transition: all 0.3s ease 0s;
   }
 
-  &::before {
+  .icon-menu::before {
     top: 0;
   }
 
-  &::after {
+  .icon-menu::after {
     bottom: 0;
   }
 
-  & span {
+  .icon-menu span {
     top: calc(50% - 1px);
+  }
+
+  .menu__body {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-color: #000;
+    padding: 100px 15px 30px 15px;
+    overflow: auto;
+    transition: left 0.3s ease 0s;
+  }
+
+  .menu__body::before {
+    content: "";
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 70px;
+    background-color: #000;
+    z-index: 2;
+    transition: left 0.3s ease 0s;
+  }
+
+  .menu-open .icon-menu span {
+    width: 0;
+  }
+
+  .menu-open .icon-menu::before {
+    top: calc(50% - 1px);
+    transform: rotate(-45deg);
+  }
+
+  .menu-open .icon-menu::after {
+    bottom: calc(50% - 1px);
+    transform: rotate(45deg);
+  }
+
+  .menu-open .menu__body,
+  .menu-open .menu__body::before {
+    left: 0;
+  }
+
+  .menu__list {
+    row-gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .menu__link {
+    font-size: 32px;
   }
 }
 
