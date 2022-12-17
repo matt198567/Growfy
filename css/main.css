@@ -193,9 +193,17 @@ button {
   font-weight: 500;
 }
 
-@media (max-width: 558px) {
-  .cart-header__quantity {
-    background-image: url(../../img/basket.svg);
+@media (max-width: 559.98px) {
+  .cart-header__quantity::before {
+    background: url("/img/lnr-cart.svg");
+    width: 45px;
+    height: 45px;
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 59%;
+    border-radius: 0;
+    transform: translate(-50%, -41%);
   }
 }
 
@@ -217,6 +225,12 @@ button {
   line-height: 1.57;
   /* 22/14 */
   flex: 0 0 auto;
+}
+
+@media (max-width: 559.98px) {
+  .header__button {
+    margin-left: 10px;
+  }
 }
 
 .button {
@@ -254,7 +268,7 @@ button {
   .icon-menu span,
   .icon-menu::before,
   .icon-menu::after {
-    content: "";
+    content: '';
     right: 0;
     position: absolute;
     width: 100%;
@@ -283,7 +297,7 @@ button {
     transition: left 0.3s ease 0s;
   }
   .menu__body::before {
-    content: "";
+    content: '';
     width: 100%;
     position: fixed;
     top: 0;
