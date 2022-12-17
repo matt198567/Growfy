@@ -101,12 +101,16 @@
   font-size: 14px;
   font-weight: 500;
 
-  @media (max-width: 559.98px) {
-    position: absolute;
-    left: 47%;
-    top: 57%;
-    transform: translate(-50%, -43%);
+  @media (max-width: 558px) {
+    background-image: url(../../img/basket.svg);
   }
+
+  // @media (max-width: 559.98px) {
+  //   position: absolute;
+  //   left: 47%;
+  //   top: 57%;
+  //   transform: translate(-50%, -43%);
+  // }
 
   @media (min-width: 560px) {
     background: rgba(129, 129, 139, 0.3);
@@ -120,15 +124,15 @@
   }
 }
 
-.basket__wrap {
-  @media (min-width: 560px) {
-    display: none;
-  }
-}
+// .basket__wrap {
+//   @media (min-width: 560px) {
+//     display: none;
+//   }
+// }
 
-.basket__svg {
-  fill: #607d8b;
-}
+// .basket__svg {
+//   fill: #607d8b;
+// }
 
 .header__button {
   color: #ffffff;

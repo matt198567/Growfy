@@ -193,12 +193,9 @@ button {
   font-weight: 500;
 }
 
-@media (max-width: 559.98px) {
+@media (max-width: 558px) {
   .cart-header__quantity {
-    position: absolute;
-    left: 47%;
-    top: 57%;
-    transform: translate(-50%, -43%);
+    background-image: url(../../img/basket.svg);
   }
 }
 
@@ -212,16 +209,6 @@ button {
     justify-content: center;
     align-items: center;
   }
-}
-
-@media (min-width: 560px) {
-  .basket__wrap {
-    display: none;
-  }
-}
-
-.basket__svg {
-  fill: #607d8b;
 }
 
 .header__button {
