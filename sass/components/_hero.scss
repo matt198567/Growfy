@@ -113,7 +113,7 @@
     max-width: 520px;
   }
   .hero-main__text {
-    max-width: 500;
+    max-width: 500px;
   }
 }
 
@@ -153,4 +153,5 @@
 
 .images-main__item img {
   width: 100%;
+  transform: scale(1.01);
 }

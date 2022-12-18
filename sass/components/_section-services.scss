@@ -27,6 +27,13 @@
   align-self: center;
 }
 
+@media (max-width: 1110px) {
+  .services__hero .hero-main__title,
+  .services__hero .hero-main__text {
+    max-width: none;
+  }
+}
+
 .hero-main__label {
   display: inline-block;
   border: 1px solid rgba(129, 129, 139, 0.2);
