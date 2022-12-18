@@ -1,5 +1,5 @@
 body {
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-weight: 300;
   color: #9c9c9c;
   background-color: #0d0d11;
@@ -16,7 +16,7 @@ body {
   overflow: clip;
 }
 
-[class*="__container"] {
+[class*='__container'] {
   max-width: 1310px;
   margin: 0 auto;
   padding: 0 15px;
@@ -24,4 +24,9 @@ body {
 
 .page {
   flex: 1 1 auto;
+}
+
+.text {
+  line-height: 1.5;
+  color: #81818b;
 }
