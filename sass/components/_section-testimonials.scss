@@ -21,14 +21,6 @@
   }
 }
 
-.testimonials__hero .hero-main__title {
-  max-width: none;
-}
-
-.testimonials__hero .hero-main__text {
-  max-width: 740px;
-}
-
 .hero-main__body {
   display: flex;
   justify-content: space-between;
@@ -50,6 +42,14 @@
   @media (max-width: 767.98px) {
     align-self: flex-start;
   }
+}
+
+.hero-main__body .hero-main__title {
+  max-width: none;
+}
+
+.hero-main__body .hero-main__text {
+  max-width: 740px;
 }
 
 .testimonials__items {
