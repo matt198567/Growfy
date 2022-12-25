@@ -15,24 +15,28 @@
     <div class="wrapper">
       <header class="header">
         <div class="header__container">
-          <a href="" class="header__logo">
+          <a href="/" class="header__logo">
             <img src="./img/Group.svg" alt="logo" />
           </a>
           <nav class="header__menu menu">
             <div class="menu__body">
               <ul class="menu__list">
-                <li class="menu__item">
-                  <a href="" class="menu__link">Home</a>
+                <li data-active-color="#FFFFFF" class="menu__item _active">
+                  <a href="#home" class="menu__link">Home</a>
                 </li>
-                <li class="menu__item">
-                  <a href="" class="menu__link">About</a>
+                <li data-active-color="#FF6961" class="menu__item">
+                  <a href="#services" class="menu__link">Services</a>
                 </li>
-                <li class="menu__item">
-                  <a href="" class="menu__link">Pages</a>
+                <li data-active-color="#779ECB" class="menu__item">
+                  <a href="#about" class="menu__link">About</a>
                 </li>
-                <li class="menu__item">
-                  <a href="" class="menu__link">Services</a>
+                <li data-active-color="#77DD77" class="menu__item">
+                  <a href="#testimonials" class="menu__link">Testimonials</a>
                 </li>
+                <li data-active-color="#FF8C00" class="menu__item">
+                  <a href="#blog" class="menu__link">Blog</a>
+                </li>
+                <div class="menu__active"><span></span></div>
               </ul>
             </div>
           </nav>
@@ -47,7 +51,7 @@
         </div>
       </header>
       <main class="page">
-        <section class="page__main main">
+        <section id="home" class="page__main main">
           <div class="main__container">
             <div class="main__content">
               <div class="main__hero hero-main">
@@ -107,7 +111,7 @@
             </ul>
           </div>
         </section>
-        <section class="page__services services">
+        <section id="services" class="page__services services">
           <div class="services__container">
             <div class="services__content">
               <div class="services__hero hero-main">
@@ -172,7 +176,7 @@
             </div>
           </div>
         </section>
-        <section class="page__why why">
+        <section id="about" class="page__why why">
           <div class="why__container">
             <div class="why__images images-why">
               <div class="images-why__item images-why__item_1">
@@ -237,7 +241,7 @@
             </div>
           </div>
         </section>
-        <section class="page__testimonials testimonials">
+        <section id="testimonials" class="page__testimonials testimonials">
           <div class="testimonials__container">
             <div class="testimonials__hero hero-main">
               <a href="" class="hero-main__label">testimonials</a>
@@ -325,7 +329,7 @@
             </ul>
           </div>
         </section>
-        <section class="page__blog blog">
+        <section id="blog" class="page__blog blog">
           <div class="blog__container">
             <div class="blog__hero hero-main">
               <a href="" class="hero-main__label">Blog</a>
@@ -442,7 +446,7 @@
         <div class="footer__main main-footer">
           <div class="main-footer__container">
             <div class="main-footer__column">
-              <a href="" class="main-footer__logo">
+              <a href="/" class="main-footer__logo">
                 <img src="./img/Group.svg" alt="">
               </a>
               <div class="main-footer__text text">
@@ -540,5 +544,6 @@
       </footer>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/menu.js"></script>
   </body>
 </html>
