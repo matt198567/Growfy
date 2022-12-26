@@ -5,6 +5,10 @@ body {
   background-color: #0d0d11;
 }
 
+body._lock {
+  overflow: hidden;
+}
+
 :root {
   --animation-time: cubic-bezier(0.4, 0, 0.2, 1);
 }
