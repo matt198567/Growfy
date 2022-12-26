@@ -1021,6 +1021,12 @@ button {
   }
 }
 
+@media (max-width: 479.98px) {
+  .hero-main__body .hero-main__actions {
+    display: contents;
+  }
+}
+
 .hero-main__body .hero-main__title {
   max-width: none;
 }
