@@ -29,7 +29,7 @@ window.addEventListener('load', windowLoad);
 
 function windowLoad() {
   document.documentElement.classList.add('loaded');
-  const menu = document.querySelector('.menu__list');
+  const menu = document.querySelector('.body__menu');
   let menuActiveElement;
 
   if (menu) {
